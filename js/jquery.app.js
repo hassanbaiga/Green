@@ -110,7 +110,7 @@
             } else {
                 $this.$backToTop.fadeOut();
             }
-        }); 
+        });
 
         //on click on navbar - Smooth Scroll To Anchor (requires jQuery Easing plugin)
         this.$topNavbar.on('click', function(event) {
@@ -119,7 +119,7 @@
                 $('html, body').stop().animate({
                     scrollTop: $($anchor.attr('href')).offset().top - 0
                 }, 1500, 'easeInOutExpo');
-                event.preventDefault();    
+                event.preventDefault();
             }
         });
 
@@ -147,10 +147,14 @@
             $('.leftbar').addClass('col-md-8 col-sm-7');
             $('.rightbar').fadeIn(1500,function(){
                 console.log("form loaded !");
-            });    
+            });
         });
 
     });
+
+    $('#search-show').click(function () {
+            $('.search-show').toggle('fast');
+        });
 
     $('#preloader').fadeOut(1000,function(){
         $('.entire').fadeIn('slow',function(){
@@ -158,6 +162,7 @@
             $('body').removeClass('defautcolor');
         });
     });
+
 
 }(window.jQuery),
 
