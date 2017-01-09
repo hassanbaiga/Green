@@ -141,6 +141,7 @@
         //init
         $.Page = new Page, $.Page.Constructor = Page
     $('.get_started').click(function(e){
+      console.log(321);
         e.preventDefault();
         $('.get_started').fadeOut('slow',function(){
             $('.leftbar').removeClass('col-md-12');
